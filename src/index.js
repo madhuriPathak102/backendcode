@@ -8,13 +8,11 @@ dotenv.config({
 })
 
 // when the database is connected then it is return promissess
-connectDB()
-
-    .then(() => {
-        app.listen(process.env.PORT || 3000, () => {
-            console.log(`Server is running at port : ${process.env.PORT}`);
-        })
+connectDB().then(() => {
+    app.listen(process.env.PORT || 3000, () => {
+        console.log(`Server is running at port : ${process.env.PORT}`);
     })
+})
     .catch((err) => {
         console.log("Mongo db connection failed !!!", err);
     })
