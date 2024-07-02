@@ -7,6 +7,11 @@ import { asyncHandler } from "../utils/asyncHandler.js"
 
 const createTweet = asyncHandler(async (req, res) => {
     //TODO: create tweet
+    const { content } = req.body
+    if([content].some((field) => field?.trim() === "")
+    ){
+        throw new ApiError(400, "Content field is required ")
+    }
 })
 
 const getUserTweets = asyncHandler(async (req, res) => {

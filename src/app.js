@@ -25,6 +25,7 @@ import playlistRouter from './routes/playlist.router.js'
 import subscriptionRouter from './routes/subscription.router.js'
 import tweetRouter from './routes/tweet.router.js'
 import videoRouter from './routes/video.router.js'
+import otpRouter from './routes/otp.router.js'
 
 
 
@@ -38,6 +39,7 @@ app.use("/api/v1/playlist", playlistRouter);
 app.use("/api/v1/subscription", subscriptionRouter);
 app.use("/api/v1/tweet", tweetRouter);
 app.use("/api/v1/video", videoRouter);
+app.use("/api/v1/otp", otpRouter);
 
 
 
